@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Press+Start+2P&display=swap');
+
+*{
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ecf0f1;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#candle {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    background-color: #633d05;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 20px;
+}
+
+#flame {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    width: 40px;
+    height: 100px;
+    background-color: #f18f0f;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px 10px rgba(241, 196, 15, 0.6);
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #7b734b; /* Purple background color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c3cf94; /* Darker purple on hover */
+}
+
+button:active {
+    background-color: #c3cf94; /* Lighter purple on click */
+}
+
+#messages h1 {
+    margin: 20px 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;  
+}
+
+#messages h1.show {
+    opacity: 1;
+    size-adjust: 100px;
+}
+
+#birthdayMessage {
+    color: #e6611a; /* Pink color for Happy Birthday */
+    text-size-adjust: 90px;
+}
+
+#loveMessage {
+    color: #404f97; /* Orange-Red color for I Love You */
+    text-size-adjust: 90px;
+}
+
+.bubbles img{
+    width: 50px;
+    animation: bubble 7s linear infinite;
+  }
+  
+  .bubbles{
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+  }
+  
+  @keyframes bubble{
+    0%{
+      transform: translateX(0);
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    70%{
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(-80vh);
+      opacity: 0;
+    }
+  
+  
+  }
+  
+  .bubbles img:nth-child(1){
+    animation-delay: 2s;
+    width: 25px;
+  }
+  .bubbles img:nth-child(2){
+    animation-delay: 1s;
+  }
+  .bubbles img:nth-child(3){
+    animation-delay: 3s;
+    width: 25px;
+  }
+  .bubbles img:nth-child(4){
+    animation-delay: 4.5s;
+  }
+  .bubbles img:nth-child(5){
+    animation-delay: 3s;
+  }
+  .bubbles img:nth-child(6){
+    width: 20px;
+    animation-delay: 6s;
+  }
+  .bubbles img:nth-child(7){
+    animation-delay: 35px;
+    animation-delay: 7s;
+  }
+  
+  .sparkles img{
+    width: 50px;
+    animation: magic 7s linear infinite;
+  }
+  
+  .sparkles{
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+  }
+  
+  @keyframes magic{
+    0%{
+      transform: translateX(0);
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    70%{
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(-80vh);
+      opacity: 0;
+    }
+  
+  
+  }
+  
+  .sparkles img:nth-child(1){
+    animation-delay: 5s;
+    
+  }
+  .sparkles img:nth-child(2){
+    animation-delay: 2.5s;
+    width: 24px;
+  }
+  .sparkles img:nth-child(3){
+    animation-delay: 3.4s;
+    
+  }
+  .sparkles img:nth-child(4){
+    animation-delay: 4.7s;
+    width: 26px;
+  }
+  .sparkles img:nth-child(5){
+    animation-delay: 2.8s;
+    width: 21px;
+  }
+  .sparkles img:nth-child(6){
+    
+    animation-delay: 8s;
+  }
+  .sparkles img:nth-child(7){
+    animation-delay: 35px;
+    animation-delay: 6.5s;
+  }
+  
+  
+  @media screen and (max-width: 600px) 
+  {
+    h1{
+      font-size: 36px;
+      line-height: 50px;
+    }
+    .side-navbar{
+      width: 100%;
+      height: 50px;
+      top: auto;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+    .social-links{
+      width: auto;
+      position: unset;
+      transform: none;
+    }
+    .useful-links{
+      width: auto;
+      position: unset;
+    }
+  }
